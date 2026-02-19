@@ -1,0 +1,23 @@
+/* Global styles for Haritech Automation */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improved focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Better image rendering */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
