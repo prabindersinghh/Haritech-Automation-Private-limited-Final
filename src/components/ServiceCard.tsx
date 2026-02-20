@@ -32,9 +32,7 @@ const ServiceCard = ({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
       className={cn(
-        "group h-full p-6 md:p-8 rounded-xl bg-card border border-border",
-        "hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5",
-        "transition-all duration-300",
+        "group h-full p-6 md:p-8 rounded-2xl card-elevated card-elevated-hover",
         variant === "compact" && "p-6",
         className
       )}

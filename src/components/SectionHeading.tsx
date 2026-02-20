@@ -21,9 +21,14 @@ const SectionHeading = ({ label, title, description, centered = true, light = fa
         {label}
       </span>
     )}
-    <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-4 ${light ? "text-primary-foreground" : "text-foreground"}`}>
+    <h2 className={`font-heading text-3xl md:text-4xl font-bold mb-3 ${light ? "text-primary-foreground" : "text-foreground"}`}>
       {title}
     </h2>
+    <div
+      className={`h-1 w-16 rounded-full bg-gradient-to-r from-primary via-[hsl(var(--electric))] to-accent mb-5 ${
+        centered ? "mx-auto" : ""
+      }`}
+    />
     {description && (
       <p className={`text-base leading-relaxed ${light ? "text-steel-light" : "text-muted-foreground"}`}>
         {description}

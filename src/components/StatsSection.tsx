@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import Section from "./Section";
 
 const stats = [
   { value: 500, suffix: "+", label: "Projects Delivered" },
@@ -44,25 +45,23 @@ const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
 };
 
 const StatsSection = () => (
-  <section className="py-16 md:py-20 bg-background bg-grid-pattern">
-    <div className="container mx-auto px-4 lg:px-8">
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-        {stats.map((stat, i) => (
-          <motion.div
-            key={stat.label}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="text-center"
-          >
-            <Counter target={stat.value} suffix={stat.suffix} />
-            <p className="text-xs sm:text-sm text-muted-foreground font-medium mt-2">{stat.label}</p>
-          </motion.div>
-        ))}
-      </div>
+  <Section variant="muted" padding="md" className="bg-grid-pattern">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      {stats.map((stat, i) => (
+        <motion.div
+          key={stat.label}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, delay: i * 0.1 }}
+          className="text-center"
+        >
+          <Counter target={stat.value} suffix={stat.suffix} />
+          <p className="text-xs sm:text-sm text-muted-foreground font-medium mt-2">{stat.label}</p>
+        </motion.div>
+      ))}
     </div>
-  </section>
+  </Section>
 );
 
 export default StatsSection;

@@ -4,8 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CTASection = () => (
-  <section className="py-16 md:py-24 bg-background">
-    <div className="container mx-auto px-4 lg:px-8">
+  <section className="py-16 md:py-24 bg-background section-shell">
+    <div className="container mx-auto px-4 lg:px-8 section-shell-inner">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ const CTASection = () => (
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             <Link to="/contact" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-primary to-accent text-primary-foreground hover:opacity-90 font-heading font-semibold gap-2 px-6 sm:px-8">
+              <Button size="lg" className="w-full sm:w-auto btn-primary-hero font-heading font-semibold gap-2 px-6 sm:px-8">
                 Request a Consultation
                 <ArrowRight className="w-4 h-4" />
               </Button>

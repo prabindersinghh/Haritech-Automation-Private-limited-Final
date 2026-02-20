@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-automation.jpg";
 
 const HeroSection = () => (
-  <section className="relative min-h-screen flex items-center overflow-hidden bg-navy">
+  <section className="relative min-h-screen flex items-center overflow-hidden bg-navy section-shell">
     {/* Background image */}
     <div className="absolute inset-0">
       <img 
@@ -16,9 +16,11 @@ const HeroSection = () => (
       />
       <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/50" />
       <div className="absolute inset-0 bg-grid-pattern-dark" />
+      <div className="pointer-events-none absolute -top-40 -left-24 w-80 h-80 bg-primary/30 opacity-40 blur-3xl rounded-full" />
+      <div className="pointer-events-none absolute -bottom-56 right-0 w-96 h-96 bg-accent/25 opacity-40 blur-3xl rounded-full" />
     </div>
 
-    <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-16">
+    <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 md:pt-40 pb-20 section-shell-inner">
       <div className="max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -35,7 +37,7 @@ const HeroSection = () => (
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 sm:mb-6"
+          className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground leading-tight mb-4 sm:mb-6 tracking-tight"
         >
           Engineering the Future of{" "}
           <span className="text-gradient">Smart Automation</span>
@@ -45,7 +47,7 @@ const HeroSection = () => (
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-base sm:text-lg text-steel-light max-w-xl mb-8 sm:mb-10 leading-relaxed"
+          className="text-base sm:text-lg text-steel-light/90 max-w-xl mb-8 sm:mb-10 leading-relaxed"
         >
           From PLC programming to full-scale SCADA integration, Haritech Automation delivers precision-engineered control systems that maximize uptime, efficiency, and profitability.
         </motion.p>
@@ -57,7 +59,7 @@ const HeroSection = () => (
           className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4"
         >
           <Link to="/contact" className="w-full sm:w-auto">
-            <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-primary to-accent text-primary-foreground hover:opacity-90 transition-opacity font-heading font-semibold gap-2 px-6 sm:px-8">
+            <Button size="lg" className="w-full sm:w-auto btn-primary-hero font-heading font-semibold gap-2 px-6 sm:px-8">
               Start Your Project
               <ArrowRight className="w-4 h-4" />
             </Button>
