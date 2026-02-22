@@ -39,9 +39,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="text-primary-foreground font-heading font-bold text-lg">H</span>
-            </div>
+            <img 
+              src="/Gemini_Generated_Image_cj9bzscj9bzscj9b.png" 
+              alt="Haritech Automation Logo" 
+              className="h-10 w-auto"
+             />
             <div>
               <span className="font-heading font-bold text-lg text-primary-foreground leading-none block">
                 Haritech
